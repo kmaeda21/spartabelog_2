@@ -1,3 +1,6 @@
+<div class="row">
+  <div class="col-lg-12">
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -27,4 +30,23 @@
 
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
+<%= link_to 'Back', restaurants_path %>|
+<%= link_to 'Write review', new_restaurant_review_path(@restaurant) %> |
+
+    <hr>
+
+    <h3>All Reviews</h3>
+    <% @restaurant.reviews.each do |review| %>
+      <p>
+        <%= review.body %> <br>
+        by <%= review.user.email %>
+      </p>
+    <% end %>
+    <hr>
+    <h3>Reviewers</h3>
+    <%# throughオプションのおかげで、BookはReviewを介してUserにアクセスできる  %>
+    <% @restaurant.users.each do |user| %>
+      <p><%= user.email %></p>
+    <% end %>
+  </div>
+</div>
