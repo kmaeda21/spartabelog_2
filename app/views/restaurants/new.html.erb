@@ -1,5 +1,15 @@
-<h1>New Restaurant</h1>
+<div class="row">
+  <div class="col-lg-12">
+    <h1>ニューレビュー登録</h1>
+    <ul>
+      <li>Name：<%= @restaurant.name %></li>
+      <li>TEL：<%= @restaurant.tel %></li>
+      <li>Address：<%= @restaurant.address %></li>
+      <li>HP：<%= @restaurant.homepage %></li>
+      <li>Image：<%= @restaurant.image_url %></li>
+    </ul>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', restaurants_path %>
+    <hr>
+    <%= render 'form' %>
+  </div>
+</div>
