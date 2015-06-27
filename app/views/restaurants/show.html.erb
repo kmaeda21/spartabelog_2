@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <img src="<%= @restaurant.image_url %>">
+</p>
+
+
+<p>
   <strong>Tel:</strong>
   <%= @restaurant.tel %>
 </p>
@@ -20,10 +25,6 @@
   <%= @restaurant.homepage %>
 </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @restaurant.image_url %>
-</p>
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>
