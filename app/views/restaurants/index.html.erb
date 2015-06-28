@@ -3,7 +3,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Restaurants</h1>
+<h1>Restaurants</h1>
 
 <table>
   <thead>
@@ -24,9 +24,9 @@
         <td><%= restaurant.address %></td>
         <td><%= restaurant.homepage %></td>
 
-        <td><%= link_to 'Show', restaurant, class: "btn btn-danger"%></td>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-danger" %></td>
-        <td><%= link_to 'Delete', restaurant, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', restaurant, class: "btn btn-default"%></td>
+        <td><%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-default" %></td>
+        <td><%= link_to 'Delete', restaurant, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,7 +34,7 @@
 
 <br>
 
-<%= link_to 'New Restaurant', new_restaurant_path, class: "btn btn-danger" %>
+<%= link_to 'New Restaurant', new_restaurant_path, class: "btn btn-success" %>
 
 </div>
 </div>
