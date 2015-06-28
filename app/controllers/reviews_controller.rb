@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!
   def new
-    @restaurant = Resbefore_action :authenticate_user!taurant.find(params[:restaurant_id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
     @review = Review.new
   end
 
